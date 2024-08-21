@@ -111,7 +111,7 @@ void udp_receive_packet(void *arg, struct udp_pcb *pcb, struct pbuf *p,
     printf("Waking!\n");
     char *mac_string = TO_STRING(TARGET_MAC);
     uint8_t mac[6];
-    sscanf(mac, "%2hhx:%2hhx:%2hhx:%2hhx:%2hhx:%2hhx",
+    sscanf(mac_string, "%2hhx:%2hhx:%2hhx:%2hhx:%2hhx:%2hhx",
            &mac[0], &mac[1], &mac[2], &mac[3], &mac[4], &mac[5]);
     send_wol(mac, &ip_addr_broadcast);
   }
