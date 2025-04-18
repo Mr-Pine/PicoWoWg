@@ -2,7 +2,7 @@
 ---
 
 ### Building
-0. Get your https://github.com/raspberrypi/pico-sdk set up (clone it to a directory of your choice)
+0. Enter a nix devShell with `nix develop` (alternatively set $PICO_SDK_PATH to a valid directory containing the pico sdk)
 1. Clone https://github.com/Mr-Pine/pi-pico-wireguard-lwip to a directory of your choice
 2. Create your build directory (i.e. ./build) and enter it
 3. run `cmake ..`. You'll have to specify extra arguments like locations of pico_wireguard (the directory you cloned it to), the sdk location, ssid, ... . For an overview see [here](arguments.cmake) but cmake should also error if you are missing required arguments
